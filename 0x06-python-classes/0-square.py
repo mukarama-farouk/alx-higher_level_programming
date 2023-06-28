@@ -5,4 +5,4 @@
 class Square:
     """Attributes and Methods:
         None"""
-    pass        
+    pass
