@@ -20,7 +20,7 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    chars = [".", "?", ":"]
+    chars = ".,?:"
 
     text_copy = text[:]
 
@@ -31,7 +31,6 @@ def text_indentation(text):
 
         for j in text_list:
             j = j.strip(" ")
-            text_copy = j + i if text_copy == "" else
-            text_copy + "\n\n" + j + i
+            text_copy = j + i if text_copy == "" else text_copy + "\n\n" + j + i
 
     print(text_copy[:-3], end="")
