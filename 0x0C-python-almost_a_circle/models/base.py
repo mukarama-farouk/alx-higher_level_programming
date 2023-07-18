@@ -68,7 +68,7 @@ class Base:
         """
 
         if json_string is None or json_string == []:
-            return []
+            return "[]"
         else:
             return json.loads(json_string)
 
@@ -105,7 +105,6 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
-
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
