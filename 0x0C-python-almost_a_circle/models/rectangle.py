@@ -53,7 +53,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        if not isinstance(value, int):
+        if type(value) != int:
             raise TypeError("width must be an integer")
         if value <= 0:
             raise ValueError("width must be > 0")
@@ -69,7 +69,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        if not isinstance(value, int):
+        if type(value) != int:
             raise TypeError("x must be an integer")
         if value < 0:
             raise ValueError("x must be >= 0")
@@ -95,8 +95,10 @@ class Rectangle(Base):
             print(' ' * self.x + '#' * self.width)
 
     def __str__(self):
-        return f"[Rectangle]({self.id}) {self.x}/{self.y} -
-    {self.width}/{self.height}"
+        """Return the print() and str() representation of the Rectangle."""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
 
     def update(self, *args, **kwargs):
         """Updating the rectangle class
