@@ -4,7 +4,7 @@ const request = require('request');
 const url = process.argv[2];
 
 request.get(url, (error, response) => {
-	if (!error && response.statusCode) {
-		console.log('code:', response.statusCode);
-	}
-})
+  if (!error && response.statusCode) {
+    console.log('code:', response.statusCode);
+  }
+});
